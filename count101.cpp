@@ -30,7 +30,7 @@ int dfs(int pos, int state, bool tight, bool matched)
         else if (state == 3) newState = 3; // 一直保持在 3 状态（已匹配）
 
         bool newMatched = matched || (newState == 3);
-        // tight && (d == maxDigit) 确定后续dfs构造当前数时是否受限，lead && (d == 0) 判断后续构造时是否还在处理前导0
+        // tight && (d == maxDigit) 确定后续dfs构造当前数时是否受限
         res += dfs(pos + 1, newState, tight && (d == maxDigit), newMatched);
     }
     return res;
