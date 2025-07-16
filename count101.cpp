@@ -48,7 +48,6 @@ int countWith101(int x)
     }
     reverse(binDigits.begin(), binDigits.end());
     memset(dp, -1, sizeof(dp));
-    //return dfs(0, 0, true, true, false);
     return dfs(0, 0, true, false);
 }
 
